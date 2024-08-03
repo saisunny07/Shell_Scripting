@@ -60,3 +60,13 @@ Shell Scripting is used to interact with  a Linux machine. Here are few basic co
 
     19) df: displays disk space info
         syntax: df -h --> displays info in giga bytes
+    
+    20) curl: Gets the information from the specified url or download any specific package for the url
+        syntax: curl url --> displays info in html format if the url endpoint is a web page
+
+    21) wget: Downloads the info from the url and save in a file
+        syntax: wget url
+
+    22) find: This command outputs the location of filename specified
+        syntax: sudo find / sample.txt --> Results the location of file from the entire root directory
+        Note: If 'sudo' is not specified, this command then maynot search in all the files in the location mentioned(here root - /), since all the files maynot have access to the user.
