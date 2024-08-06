@@ -23,7 +23,8 @@ Description of commands:
     
     * To retrive info regarding only instance id, we can use json parser as follow:
     
-    instance_ids=$(aws ec2 describe-instances | jq -r '.Reservations[].Instances[].InstanceId')
+        instance_ids=$(aws ec2 describe-instances | jq -r '.Reservations[].Instances[].InstanceId')
+
     Note: '-r' flag removes the quotes from the obtained json output
 
 
