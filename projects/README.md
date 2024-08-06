@@ -1,4 +1,4 @@
-This project is all about tracking aws resources using basic shell scripting
+This project is all about tracking aws resources using shell scripting
 
 Steps to be followed:
 1) First we need to install aws cli and configure it.
@@ -17,12 +17,15 @@ Referance link for the above aws cli commands - https://awscli.amazonaws.com/v2/
 
 Description of commands:
 1) aws s3 ls: This command lists all the aws s3 buckets in the current account
-2) aws ec2 describe-instances: This command lists all the aws ec2 instances in the current account. This command gives all the info of the ec2 instance. For information regarding only instance id, we can use json parser as follow:
+2) aws ec2 describe-instances: This command lists all the aws ec2 instances in the current account. This command gives all the info of the ec2 instance.
+    
+    * To retrive info regarding only instance id, we can use json parser as follow:
     
     instance_ids=$(aws ec2 describe-instances | jq -r '.Reservations[].Instances[].InstanceId')
     Note: '-r' flag removes the quotes from the obtained json output
 
     * Using for loop to extract each item as below:
+
                 for instance_id in $instance_ids; do
                     echo "Instance ID: $instance_id"
                 done
