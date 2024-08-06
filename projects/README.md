@@ -7,6 +7,7 @@ Steps to be followed:
 2) Create a new shell file which contains the code for tracking the required resources.
 3) In this project, I tracked the aws resources like s3 buckets, ec2 instances, lambda functions and iam users
 
+
 List of aws cli commands used:
 1) aws s3 ls
 2) aws ec2 describe-instances
@@ -14,6 +15,7 @@ List of aws cli commands used:
 4) aws iam list-users
 
 Referance link for the above aws cli commands - https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html
+
 
 Description of commands:
 1) aws s3 ls: This command lists all the aws s3 buckets in the current account
@@ -24,6 +26,8 @@ Description of commands:
     instance_ids=$(aws ec2 describe-instances | jq -r '.Reservations[].Instances[].InstanceId')
     Note: '-r' flag removes the quotes from the obtained json output
 
+
+    
     * Using for loop to extract each item as below:
 
                 for instance_id in $instance_ids; do
