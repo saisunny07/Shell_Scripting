@@ -27,7 +27,10 @@ echo ''
 
 # lists ec2 instances
 echo 'List of ec2 instances'
-aws ec2 describe-instances
+instance_ids=$(aws ec2 describe-instances | jq -r '.Reservations[].Instances[].InstanceId')
+for instance_id in $instance_ids; do
+	echo "Instance ID: $instance_id"
+done
 echo ''
 echo ''
 
