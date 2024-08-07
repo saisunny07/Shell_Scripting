@@ -1,4 +1,4 @@
-This project is all about listing the collaborators of a git repository of an organization through api call in shell scripting.
+This project is all about listing the collaborators of a git repository of an organization through api call using shell scripting.
 
 GitHub api document: https://docs.github.com/en/rest?apiVersion=2022-11-28
 
