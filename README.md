@@ -70,3 +70,24 @@ Shell Scripting is used to interact with  a Linux machine. Here are few basic co
     22) find: This command outputs the location of filename specified
         syntax: sudo find / sample.txt --> Results the location of file from the entire root directory
         Note: If 'sudo' is not specified, this command then maynot search in all the files in the location mentioned(here root - /), since all the files maynot have access to the user.
+    
+    23) crontab: Using this process we can periodically schedule tasks. Tasks can be simple echo statements, creating new files, running scripts etc.
+
+        crontab -l : Lists the available cron jobs for the current user
+        crontab -e : Used to edit or create a new cron job for a current user    
+            syntax: * * * * * cmd
+
+                    1st '*' represents minutes
+                    2nd '*' represents hours
+                    3rd '*' represents day
+                    4th '*' represents month
+                    5th '*' represents day of week[0 - 6]
+
+        Ex: * * * * * echo 'Hi' => This job runs every minute of every hour of every day of every month of every day of week, which prints Hi to the console.
+
+        Ex: * * * * * sh AbsolutePath of file >> AbsolutePath of output file  => Runs the shell file at the absolute path and saves the output in the output file. New file is created with same name if output file is not present in the specified location. 
+        
+        Incase if ouput file path is relative path, new file is created in /home/ubuntu directory.
+        Incase if input file path is relative path, the shell file may not be executed.
+
+        
