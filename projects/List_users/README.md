@@ -16,5 +16,12 @@ API call to list collaborators of a repository using cURL :
         
     * helper : This function check if number of positional arguments are 2 or not.
 
+Steps for generating github token:
+1) Login to github url
+2) Click on profile icon
+3) Go to settings > Developer Settings > Personal access tokens > Token(classic)
+4) Click on generate new token > Generate new token(classic)
+5) Give name in Note, select Expiration period and Select scopes and then Generate token.
+Note: For this project it is fine providing all permissions.
 
 
