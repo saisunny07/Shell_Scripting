@@ -22,6 +22,7 @@ Steps for generating github token:
 3) Go to settings > Developer Settings > Personal access tokens > Token(classic)
 4) Click on generate new token > Generate new token(classic)
 5) Give name in Note, select Expiration period and Select scopes and then Generate token.
+
 Note: For this project it is fine providing all permissions.
 
 
